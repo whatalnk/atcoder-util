@@ -80,7 +80,7 @@ func langToExt(l string) string {
 	case "go":
 		ret = ".go"
 	case "rust":
-		ret = "rs"
+		ret = ".rs"
 	default:
 		ret = ".txt"
 	}
