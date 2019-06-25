@@ -49,11 +49,11 @@ func KwComment(l string) string {
 	var ret string
 	switch l {
 	case "ruby", "python":
-		ret = "# "
+		ret = "#"
 	case "rust", "go", "cpp":
-		ret = "// "
+		ret = "//"
 	default:
-		ret = "// "
+		ret = "//"
 	}
 	return ret
 }
