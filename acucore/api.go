@@ -98,4 +98,9 @@ func save(filePath string, code string) {
 		log.Fatal(err)
 	}
 	defer f.Close()
+
+	_, err = f.WriteString(code)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
