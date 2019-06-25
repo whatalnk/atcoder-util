@@ -1,10 +1,12 @@
 package main
 
-import "github.com/whatalnk/atcoder-util/acucore"
+import (
+	"github.com/whatalnk/atcoder-util/acucore"
+)
 
 func main() {
-	user := "wtnk0812"
-	targetDir := "atcoder"
-	submissions := acucore.FetchSubmissions(user)
-	acucore.Update(targetDir, submissions)
+	acucore.Run(acucore.Config{
+		User:      "wtnk0812",
+		TargetDir: "atcoder",
+	})
 }
