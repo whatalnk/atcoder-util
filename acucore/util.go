@@ -43,3 +43,17 @@ func LangToExt(l string) string {
 	}
 	return ret
 }
+
+// KwComment Keyword for comment
+func KwComment(l string) string {
+	var ret string
+	switch l {
+	case "ruby", "python":
+		ret = "# "
+	case "rust", "go", "cpp":
+		ret = "// "
+	default:
+		ret = "// "
+	}
+	return ret
+}
