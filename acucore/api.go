@@ -160,4 +160,5 @@ func save(filePath string, code string) {
 	if err != nil {
 		log.Fatal(err)
 	}
+	log.Printf("Saved: %s", filePath)
 }
