@@ -145,6 +145,9 @@ func fetchCode(contestID string, id int) string {
 
 func update(targetDir string, submissions map[int]Submission) {
 	for _, v := range submissions {
+		if v.Result != "AC" {
+			continue
+		}
 		lang := normLang(v.Language)
 		ext := langToExt(lang)
 		fileName := fmt.Sprintf("%d%s", v.ID, ext)
